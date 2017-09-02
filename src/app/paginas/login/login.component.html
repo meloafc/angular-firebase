@@ -14,7 +14,7 @@
 
             <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-            <form id="loginform" class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form">
 
               <div class="form-group">
                 <label for="usuario">Usuário</label>
@@ -37,7 +37,7 @@
           -->
 
               <div style="margin-top:10px" class="form-group">
-                <a href="#" class="btn btn-primary">Login</a>
+                <button (click)="fazerLogin()" class="btn btn-primary">Login</button>
                 <a href="#" class="btn btn-link">Cadastrar</a>
               </div>
 
