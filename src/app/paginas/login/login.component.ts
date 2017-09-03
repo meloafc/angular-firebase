@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from "../../core/services/login.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'login',
@@ -12,6 +13,7 @@ export class LoginComponent implements OnInit {
   loading = false;
 
   constructor(
+    private router: Router,
     private loginService: LoginService
   ) { }
 
@@ -20,5 +22,6 @@ export class LoginComponent implements OnInit {
 
   fazerLogin() {
     this.loginService.fazerLogin({usuario: 'alex', senha: 'alex'});
+    this.router.navigate(['/']);
   }
 }
